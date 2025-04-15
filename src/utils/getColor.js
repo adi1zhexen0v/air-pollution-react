@@ -1,0 +1,33 @@
+export function getColor(value) {
+  if (value <= 10) return "#00e400";
+  if (value <= 20) return "#33e400";
+  if (value <= 30) return "#66e400";
+  if (value <= 40) return "#99e400";
+  if (value <= 50) return "#cce400";
+  if (value <= 60) return "#ffff00";
+  if (value <= 70) return "#ffea00";
+  if (value <= 80) return "#ffd700";
+  if (value <= 90) return "#ffc400";
+  if (value <= 100) return "#ffb100";
+  if (value <= 110) return "#ff9900";
+  if (value <= 120) return "#ff8800";
+  if (value <= 130) return "#ff7700";
+  if (value <= 140) return "#ff6600";
+  if (value <= 150) return "#ff5500";
+  if (value <= 160) return "#ff0000";
+  if (value <= 170) return "#e00000";
+  if (value <= 180) return "#c00000";
+  if (value <= 190) return "#a00000";
+  if (value <= 200) return "#800000";
+  if (value <= 210) return "#9900cc";
+  if (value <= 220) return "#8800bb";
+  if (value <= 230) return "#7700aa";
+  if (value <= 240) return "#660099";
+  if (value <= 250) return "#550088";
+  if (value <= 260) return "#7e0023";
+  if (value <= 270) return "#6e0020";
+  if (value <= 280) return "#5e001d";
+  if (value <= 290) return "#4e001a";
+  if (value <= 300) return "#3e0017";
+  return "#2e0014";
+}
