@@ -32,21 +32,29 @@ const Map = ({ data, selectedDate }) => {
           attribution="&copy; OpenStreetMap contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {data.map((point, idx) => (
-          <Marker
-            key={idx}
-            position={[point.latitude, point.longitude]}
-            icon={createCustomIcon(point["PM2.5"])}
-          >
-            <Popup>
-              <b>{point.station_name}</b>
-              <br />
-              PM2.5: {point["PM2.5"]}
-              <br />
-              Date: {point.date}
-            </Popup>
-          </Marker>
-        ))}
+        {data
+          .filter(
+            (point) =>
+              point.latitude &&
+              point.longitude &&
+              !isNaN(point.latitude) &&
+              !isNaN(point.longitude)
+          )
+          .map((point, idx) => (
+            <Marker
+              key={idx}
+              position={[point.latitude, point.longitude]}
+              icon={createCustomIcon(point["PM2.5"])}
+            >
+              <Popup>
+                <b>{point.station_name}</b>
+                <br />
+                PM2.5: {point["PM2.5"]}
+                <br />
+                Date: {point.date}
+              </Popup>
+            </Marker>
+          ))}
       </MapContainer>
     </div>
   );

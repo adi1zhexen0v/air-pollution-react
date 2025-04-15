@@ -65,7 +65,7 @@ const App = () => {
     <>
       <Header />
       <div className="container">
-        <h1 className="page-title">7-Day Air Quality Forecast</h1>
+        <h1 className="page-title">7-Day Air Quality Forecast in Almaty</h1>
         <DateSelector
           dailyData={dailyData}
           selectedDate={selectedDate}
